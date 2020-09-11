@@ -1,0 +1,66 @@
+﻿@model IEnumerable<EConference.Models.RegisterPaper>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PaperId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaperTopic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaperTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Publisher)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Participant)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConferenceStatus)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaperId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaperTopic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaperTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Publisher)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Participant)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConferenceStatus)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
