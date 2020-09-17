@@ -7,6 +7,6 @@ namespace EConference.DataAccess.Repository.IRepository
 {
     public interface IConferenceNameRepo : IRepository<ConferenceName>
     {
-        void Update(ConferenceName conferenceName);
+        void Update(ConferenceName ConferenceName);
     }
 }

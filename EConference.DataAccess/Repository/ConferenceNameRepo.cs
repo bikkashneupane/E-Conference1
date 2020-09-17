@@ -17,9 +17,13 @@ namespace EConference.DataAccess.Repository
             _db = db;
         }
 
-        public void Update(ConferenceName conferenceName)
+        public void Update(ConferenceName ConferenceName)
         {
-            var objFromDB = _db.ConferenceName.FirstOrDefault(a=> a.Id == conferenceName.Id);
+            var objFromDB = _db.ConferenceName.FirstOrDefault(a => a.Id == ConferenceName.Id);
+            if (objFromDB != null)
+            {
+                objFromDB.Name = ConferenceName.Name;
+            }
         }
     }
 }

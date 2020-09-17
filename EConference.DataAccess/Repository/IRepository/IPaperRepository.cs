@@ -5,8 +5,8 @@ using System.Text;
 
 namespace EConference.DataAccess.Repository.IRepository
 {
-    public interface IPaperRepository : IRepository<RegisterPaper>
+    public interface IPaperRepository : IRepository<Papers>
     {
-        void Update(RegisterPaper paper);
+       void Update(Papers papers);
     }
 }

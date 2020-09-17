@@ -14,6 +14,6 @@ namespace EConference.DataAccess.Data
         {
         }
         public DbSet<ConferenceName> ConferenceName { get; set; }
-        public DbSet<RegisterPaper> PapersRegistered { get; set; }
+        public DbSet<Papers> Papers { get; set; }
     }
 }

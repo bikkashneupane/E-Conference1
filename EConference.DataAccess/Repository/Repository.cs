@@ -11,24 +11,23 @@ namespace EConference.DataAccess.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
     {
+
         private readonly ApplicationDbContext _db;
         internal DbSet<T> dbSet;
 
         public Repository(ApplicationDbContext db)
         {
             _db = db;
-            this.dbSet = _db.Set<T>(); 
+            this.dbSet = _db.Set<T>();
         }
 
         public void Add(T entity)
         {
-            //add context
             dbSet.Add(entity);
         }
 
         public T Get(int id)
         {
-            //return by id
             return dbSet.Find(id);
         }
 
@@ -38,33 +37,6 @@ namespace EConference.DataAccess.Repository
 
             if (filter != null)
             {
-                //pass the condition that we get from filter
-                query = query.Where(filter);
-            }
-
-            if (includeProperties != null)
-            {
-                foreach (var includeProp in includeProperties.Split(new char[] { ','}, StringSplitOptions.RemoveEmptyEntries))
-                {
-                    query = query.Include(includeProp);
-                }
-            }
-
-            if (orderBy != null)
-            {
-                return orderBy(query).ToList();
-            }
-
-            return query.ToList();
-        }
-
-        public T GetFirstOrDefault(Expression<Func<T, bool>> filter = null, string includeProperties = null)
-        {
-            IQueryable<T> query = dbSet;
-
-            if (filter != null)
-            {
-                //pass the condition that we get from filter
                 query = query.Where(filter);
             }
 
@@ -75,7 +47,32 @@ namespace EConference.DataAccess.Repository
                     query = query.Include(includeProp);
                 }
             }
-           
+
+            if (orderBy != null)
+            {
+                return orderBy(query).ToList();
+            }
+            return query.ToList();
+        }
+
+        public T GetFirstOrDefault(Expression<Func<T, bool>> filter = null, string includeProperties = null)
+        {
+            IQueryable<T> query = dbSet;
+
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+
+            if (includeProperties != null)
+            {
+                foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeProp);
+                }
+            }
+
+
             return query.FirstOrDefault();
         }
 

@@ -12,8 +12,8 @@ namespace EConference.Models
         public int Id { get; set; }
 
         [Required]
-        [MaxLength(6)]
+        [MaxLength(7)]
         [DisplayName("Conference Name")]
-        public string name { get; set; }
+        public string Name { get; set; }
     }
 }

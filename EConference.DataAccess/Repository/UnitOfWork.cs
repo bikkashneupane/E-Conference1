@@ -15,7 +15,7 @@ namespace EConference.DataAccess.Repository
             _db = db;
             SP_Call = new SP_Call(_db);
             ConferenceName = new ConferenceNameRepo(_db);
-            Papers = new PaperRepository(_db);
+            Papers = new PaperRepo(_db);
         }
 
         public ISP_Call SP_Call { get; private set; }
