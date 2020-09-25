@@ -29,7 +29,7 @@ namespace EConference.Models
         public string Participant { get; set; }
 
         [Required]
-        public string TimeZone { get; set; }
+        public int TimeZone { get; set; }
 
         [Required]
         public string Country { get; set; }

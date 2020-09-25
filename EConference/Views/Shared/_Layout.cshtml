@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using EConference.Utility
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -31,16 +32,35 @@
                         <li class="nav-item">
                             <a class="nav-link " asp-area="" asp-controller="Home" asp-action="ContactUs">Contact Us</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Conference
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" asp-area="Admin" asp-controller="ConferenceNames" asp-action="Index">Conference Name</a>
-                                <a class="dropdown-item" asp-area="Admin" asp-controller="Users" asp-action="Index">Authors</a>
-                                <a class="dropdown-item" asp-area="Admin" asp-controller="Papers" asp-action="Index">Papers</a>
-                            </div>
-                        </li>
+                        @if (User.IsInRole(SD.Role_Admin))
+                        {
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Conference
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" asp-area="Admin" asp-controller="ConferenceNames" asp-action="Index">Conference Name</a>
+                            <a class="dropdown-item" asp-area="Admin" asp-controller="Users" asp-action="Index">Users</a>
+                            <a class="dropdown-item" asp-area="Admin" asp-controller="Papers" asp-action="Index">Papers</a>
+                        </div>
+                    </li>}
+                        @if (User.IsInRole(SD.Role_Conference_Manager))
+                        {
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Conference
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" asp-area="Admin" asp-controller="ConferenceNames" asp-action="Index">Conference Name</a>
+                            <a class="dropdown-item" asp-area="Admin" asp-controller="Papers" asp-action="Index">Papers</a>
+                        </div>
+                    </li>}
+                        @if (User.IsInRole(SD.Role_Author))
+                        {
+                    <li class="nav-item">
+                        <a class="nav-link " asp-area="Admin" asp-controller="Papers" asp-action="Index">My Paper</a>
+                    </li>}
+
                     </ul>
                 </div>
             </div>
@@ -62,7 +82,7 @@
             </span>
         </div>
     </footer>
-    <
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

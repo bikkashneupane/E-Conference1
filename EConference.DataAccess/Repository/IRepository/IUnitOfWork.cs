@@ -12,6 +12,8 @@ namespace EConference.DataAccess.Repository.IRepository
 
         IPaperRepository Papers { get; }
 
+        IApplicationUserRepo Users { get;  }
+
         void Save();
     }
 }

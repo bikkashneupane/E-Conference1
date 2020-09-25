@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using EConference.DataAccess.Repository.IRepository;
 using EConference.Models;
 using EConference.Models.ViewModels;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
