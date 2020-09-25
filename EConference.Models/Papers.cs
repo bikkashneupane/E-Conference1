@@ -16,7 +16,7 @@ namespace EConference.Models
         public string PaperId { get; set; }
 
         [Required]
-        public string PaperTopic { get; set; }
+        public int PaperTopic { get; set; }
 
         [Required]
         public string PaperTitle { get; set; }
