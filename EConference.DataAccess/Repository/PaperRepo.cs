@@ -29,7 +29,7 @@ namespace EConference.DataAccess.Repository
                 objFromDB.Participant = papers.Participant;
                 objFromDB.TimeZone = papers.TimeZone;
                 objFromDB.Country = papers.Country;
-                objFromDB.ConferenceId = papers.ConferenceId;
+                objFromDB.ConferenceNameId = papers.ConferenceNameId;
 
 
             }
