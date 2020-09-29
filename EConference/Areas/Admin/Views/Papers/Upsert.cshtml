@@ -87,7 +87,7 @@
                     Conference
                 </div>
                 <div class="col-8">
-                    @Html.DropDownListFor(i => i.Papers.ConferenceId, Model.ConferenceList, "--Select Conference--",
+                    @Html.DropDownListFor(i => i.Papers.ConferenceNameId, Model.ConferenceList, "--Select Conference--",
                     new { @class = "form-control"})
                     <span asp-for="Papers.ConferenceId" class="text-danger"></span>
                 </div>

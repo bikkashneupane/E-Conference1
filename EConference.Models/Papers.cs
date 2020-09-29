@@ -34,9 +34,9 @@ namespace EConference.Models
         [Required]
         public string Country { get; set; }
 
-        public int ConferenceId { get; set; }
+        public int ConferenceNameId { get; set; }
 
-        [ForeignKey("ConferenceId")]
+        [ForeignKey("ConferenceNameId")]
         public ConferenceName ConferenceName { get; set; }
 
     }
