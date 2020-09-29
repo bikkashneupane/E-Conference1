@@ -16,11 +16,13 @@ namespace EConference.DataAccess.Repository
             SP_Call = new SP_Call(_db);
             ConferenceName = new ConferenceNameRepo(_db);
             Papers = new PaperRepo(_db);
+            Conferences = new ConferenceRepo(_db);
         }
 
         public ISP_Call SP_Call { get; private set; }
         public IConferenceNameRepo ConferenceName { get; private set; }
         public IPaperRepository Papers { get; private set; }
+        public IConferenceRepo Conferences { get; private set; }
 
         public void Dispose()
         {
