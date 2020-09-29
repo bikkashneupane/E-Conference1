@@ -1,0 +1,62 @@
+﻿@model Conference
+
+<br />
+<div class="row">
+    <div class="col-6">
+        <h2 class="text-primary">Conference #@Model.ID Details</h2>
+    </div>
+</div>
+
+<div class="p-4 border rounded">
+    <table id="tblData" class="table table-striped table-bordered" style="width:100%">
+        <thead class="thead-dark">
+            <tr class="table-info d-flex">
+                <th class="col-1">ID</th>
+                <th class="col-4">Name</th>
+                <th class="col-5">Date</th>
+                <th class="col-1">Papers</th>
+                <th class="col-1">Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="d-flex">
+                <td class="col-1">@Model.ID</td>
+                <td class="col-4">@Model.Name.Name</td>
+                <td class="col-5">@Model.ScheduledDate</td>
+                <td class="col-1">@(Model.Papers?.Count ?? 0)</td>
+                <td class="col-1">
+                    <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@Model.ID">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <h3>Papers in this conference</h3>
+    <table id="tblData" class="table table-striped table-bordered" style="width:100%">
+        <thead class="thead-dark">
+            <tr class="table-info">
+                <th>Paper ID</th>
+                <th>Topic</th>
+                <th>Title</th>
+                <th>Publisher</th>
+                <th>Participant</th>
+                <th>Time Zone</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Papers p in Model.Papers ?? Enumerable.Empty<Papers>())
+            {
+                <tr>
+                    <td>@p.PaperId</td>
+                    <td>@EConferenceSortingTest.Models.PaperTopic.Get(p.PaperTopic).Name</td>
+                    <td>@p.PaperTitle</td>
+                    <td>@p.Publisher</td>
+                    <td>@p.Participant</td>
+                    <td>@TimeZoneInfo.FindSystemTimeZoneById(p.TimeZone).DisplayName</td>
+                    <td>@p.Country</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
