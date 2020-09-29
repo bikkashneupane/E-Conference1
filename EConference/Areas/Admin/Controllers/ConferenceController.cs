@@ -88,6 +88,11 @@ namespace EConference.Areas.Admin.Controllers
                 }
             }
 
+            foreach (Conference c in toSchedule)
+                _unitOfWork.Conferences.Add(c);
+
+            _unitOfWork.Save();
+
             //return View("Index", toSchedule.OrderBy(c => c.ScheduledDate));
             return Index();
         }
