@@ -50,18 +50,27 @@ namespace EConference.Areas.Admin.Controllers
 
         public IActionResult ViewDetails(int id)
         {
-            return View("Details", _unitOfWork.Conferences.GetAll().Where(c => c.ID == id).First());
+            return View("Details", _unitOfWork.Conferences.Get(id));
         }
 
         public IActionResult Delete(int id)
         {
+            List<Papers> updatedPapers = _unitOfWork.Papers.GetAll().Where(p => p.ConferenceNameId == id).ToList();
+
             _unitOfWork.Conferences.Remove(id);
-            return Index();
+
+            foreach (Papers p in updatedPapers ?? Enumerable.Empty<Papers>())
+            {
+                p.ConferenceName = null;
+                _unitOfWork.Papers.Update(p);
+            }
+            _unitOfWork.Save();
+            return RedirectToAction("Index");
         }
 
         public IActionResult Schedule()
         {
-            List<List<Papers>> lists = PaperSorter.GroupPapers(_unitOfWork.Papers.GetAll().Where(p => p.ConferenceName == null).ToList());
+            List<List<Papers>> lists = PaperSorter.GroupPapers(_unitOfWork.Papers.GetAll().Where(p => !_unitOfWork.Conferences.GetAll().SelectMany(c => c.Papers).Contains(p)).ToList());
 
             TempData["sorted"] = JsonConvert.SerializeObject(lists);
 
@@ -75,26 +84,32 @@ namespace EConference.Areas.Admin.Controllers
 
             List<Conference> toSchedule = new List<Conference>();
 
-            for(int i = 0; i < lists.Count; i++)
+            for (int i = 0; i < groupName.Count; i++)
             {
-                if (!(groupName[i] == 0 || groupTime[i].Length == 0 || groupDate[i].Length == 0))
+                if (!(groupName?[i] == 0 || groupTime?[i].Length == 0 || groupDate?[i].Length == 0))
                 {
+                    foreach (Papers p in lists[i])
+                    {
+                        p.ConferenceNameId = groupName[i];
+                        p.ConferenceName = _unitOfWork.ConferenceName.Get(groupName[i]);
+                    }
                     toSchedule.Add(new Conference()
                     {
-                        Name = _unitOfWork.ConferenceName.GetAll().Where(cn => cn.Id == groupName[i]).FirstOrDefault(),
-                        Papers = lists[i],
+                        Name = _unitOfWork.ConferenceName.Get(groupName[i]),
+                        Papers = _unitOfWork.Papers.GetAll().Where(p => lists[i].Select(p => p.Id).Contains(p.Id)).ToList(),
                         ScheduledDate = DateTime.Parse(groupDate[i] + " " + groupTime[i]).ToString()
-                    });;
+                    });
                 }
             }
 
             foreach (Conference c in toSchedule)
+            {
                 _unitOfWork.Conferences.Add(c);
+            }
 
             _unitOfWork.Save();
 
-            //return View("Index", toSchedule.OrderBy(c => c.ScheduledDate));
-            return Index();
+            return RedirectToAction("Index");
         }
     }
 }

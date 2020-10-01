@@ -13,7 +13,7 @@
         {
             //edit
             title = "Edit Paper";
-            <input type="hidden" asp-for="Papers.Id"/>
+            <input type="hidden" asp-for="Papers.Id" />
         }
         <div class="col-12 border-bottom">
             <h2 class="text-primary">@title</h2>
@@ -33,7 +33,12 @@
                     <label asp-for="Papers.PaperTopic"></label>
                 </div>
                 <div class="col-8">
-                    <input asp-for="Papers.PaperTopic" class="form-control" />
+                    <select asp-for="Papers.PaperTopic" class="form-control">
+                        @foreach (EConferenceSortingTest.Models.PaperTopic pt in EConferenceSortingTest.Models.PaperTopic.TopicList)
+                        {
+                            <option value="@pt.ID">@pt.Name</option>
+                        }
+                    </select>
                     <span asp-validation-for="Papers.PaperTopic" class="text-danger"></span>
                 </div>
             </div>
@@ -69,7 +74,12 @@
                     <label asp-for="Papers.TimeZone"></label>
                 </div>
                 <div class="col-8">
-                    <input asp-for="Papers.TimeZone" class="form-control" />
+                    <select asp-for="Papers.TimeZone" class="form-control">
+                        @foreach (TimeZoneInfo t in TimeZoneInfo.GetSystemTimeZones())
+                        {
+                            <option value="@t.Id" selected="@(t.Id == TimeZoneInfo.Local.Id ? "selected" : "")" >@t.DisplayName</option>
+                        }
+                    </select>
                     <span asp-validation-for="Papers.TimeZone" class="text-danger"></span>
                 </div>
             </div>
@@ -80,16 +90,6 @@
                 <div class="col-8">
                     <input asp-for="Papers.Country" class="form-control" />
                     <span asp-validation-for="Papers.Country" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-4">
-                    Conference
-                </div>
-                <div class="col-8">
-                    @Html.DropDownListFor(i => i.Papers.ConferenceNameId, Model.ConferenceList, "--Select Conference--",
-                    new { @class = "form-control"})
-                    <span asp-for="Papers.ConferenceId" class="text-danger"></span>
                 </div>
             </div>
             <div class="form-group row">
@@ -115,6 +115,6 @@
     </div>
 </form>
 
-@section Scripts{ 
-<partial name="_ValidationScriptsPartial" />
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
 }

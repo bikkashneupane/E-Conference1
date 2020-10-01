@@ -34,10 +34,10 @@ namespace EConference.Models
         [Required]
         public string Country { get; set; }
 
-        public int ConferenceNameId { get; set; }
+        public int? ConferenceNameId { get; set; }
 
         [ForeignKey("ConferenceNameId")]
-        public ConferenceName ConferenceName { get; set; }
+        public virtual ConferenceName ConferenceName { get; set; }
 
     }
 }

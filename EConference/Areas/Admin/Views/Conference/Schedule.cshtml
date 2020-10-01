@@ -58,6 +58,9 @@
                 }
             </tbody>
         </table>
-        <button type="submit" class="btn btn-outline-primary">Schedule Conferences</button>
+        @if (Model.Groups.Count > 0)
+        {
+            <button type="submit" class="btn btn-outline-primary">Schedule Conferences</button>
+        }
     </form>
 </div>

@@ -9,8 +9,8 @@ namespace EConference.Models
     {
         [Key]
         public int ID { get; set; }
-        public ConferenceName Name { get; set; }
-        public List<Papers> Papers { get; set; }
+        public virtual ConferenceName Name { get; set; }
+        public virtual List<Papers> Papers { get; set; }
         public string ScheduledDate { get; set; }
     }
 }
