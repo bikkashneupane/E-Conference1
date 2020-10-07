@@ -1,0 +1,9 @@
+D:\EConference-Bikash\EConference.Utility\bin\Debug\netcoreapp3.1\EConference.Utility.deps.json
+D:\EConference-Bikash\EConference.Utility\bin\Debug\netcoreapp3.1\EConference.Utility.dll
+D:\EConference-Bikash\EConference.Utility\bin\Debug\netcoreapp3.1\EConference.Utility.pdb
+D:\EConference-Bikash\EConference.Utility\obj\Debug\netcoreapp3.1\EConference.Utility.AssemblyInfoInputs.cache
+D:\EConference-Bikash\EConference.Utility\obj\Debug\netcoreapp3.1\EConference.Utility.AssemblyInfo.cs
+D:\EConference-Bikash\EConference.Utility\obj\Debug\netcoreapp3.1\EConference.Utility.csproj.CoreCompileInputs.cache
+D:\EConference-Bikash\EConference.Utility\obj\Debug\netcoreapp3.1\EConference.Utility.dll
+D:\EConference-Bikash\EConference.Utility\obj\Debug\netcoreapp3.1\EConference.Utility.pdb
+D:\EConference-Bikash\EConference.Utility\obj\Debug\netcoreapp3.1\EConference.Utility.csprojAssemblyReference.cache

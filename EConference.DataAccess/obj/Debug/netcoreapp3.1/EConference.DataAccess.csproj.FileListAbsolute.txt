@@ -1,0 +1,14 @@
+D:\EConference-Bikash\EConference.DataAccess\bin\Debug\netcoreapp3.1\EConference.DataAccess.deps.json
+D:\EConference-Bikash\EConference.DataAccess\bin\Debug\netcoreapp3.1\EConference.DataAccess.dll
+D:\EConference-Bikash\EConference.DataAccess\bin\Debug\netcoreapp3.1\EConference.DataAccess.pdb
+D:\EConference-Bikash\EConference.DataAccess\bin\Debug\netcoreapp3.1\EConference.Models.dll
+D:\EConference-Bikash\EConference.DataAccess\bin\Debug\netcoreapp3.1\EConference.Utility.dll
+D:\EConference-Bikash\EConference.DataAccess\bin\Debug\netcoreapp3.1\EConference.Models.pdb
+D:\EConference-Bikash\EConference.DataAccess\bin\Debug\netcoreapp3.1\EConference.Utility.pdb
+D:\EConference-Bikash\EConference.DataAccess\obj\Debug\netcoreapp3.1\EConference.DataAccess.csprojAssemblyReference.cache
+D:\EConference-Bikash\EConference.DataAccess\obj\Debug\netcoreapp3.1\EConference.DataAccess.AssemblyInfoInputs.cache
+D:\EConference-Bikash\EConference.DataAccess\obj\Debug\netcoreapp3.1\EConference.DataAccess.AssemblyInfo.cs
+D:\EConference-Bikash\EConference.DataAccess\obj\Debug\netcoreapp3.1\EConference.DataAccess.csproj.CoreCompileInputs.cache
+D:\EConference-Bikash\EConference.DataAccess\obj\Debug\netcoreapp3.1\EConference.DataAccess.csproj.CopyComplete
+D:\EConference-Bikash\EConference.DataAccess\obj\Debug\netcoreapp3.1\EConference.DataAccess.dll
+D:\EConference-Bikash\EConference.DataAccess\obj\Debug\netcoreapp3.1\EConference.DataAccess.pdb
