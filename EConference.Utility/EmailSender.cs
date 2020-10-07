@@ -28,6 +28,7 @@ namespace EConference.Utility
             var to = new EmailAddress(email, "End User");
             var msg = MailHelper.CreateSingleEmail(from, to, subject, "", message);
             return client.SendEmailAsync(msg);
+
         }
     }
 }

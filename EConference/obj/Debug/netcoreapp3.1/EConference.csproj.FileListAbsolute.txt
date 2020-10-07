@@ -510,3 +510,7 @@ D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\P
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\EConference.csproj.CoreCompileInputs.cache
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\EConference.MvcApplicationPartsAssemblyInfo.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\EConference.MvcApplicationPartsAssemblyInfo.cache
+D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\AccessDenied.cshtml.g.cs
+D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\ConfirmEmail.cshtml.g.cs
+D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\ConfirmEmailChange.cshtml.g.cs
+D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\RegisterConfirmation.cshtml.g.cs
