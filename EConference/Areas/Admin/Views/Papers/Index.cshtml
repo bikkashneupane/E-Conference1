@@ -3,6 +3,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@model IEnumerable<Papers>
+
 <br />
 <div class="row">
     <div class="col-6">
@@ -29,10 +31,38 @@
                 <th></th>
             </tr>
         </thead>
+        <tbody>
+            @foreach (Papers p in Model)
+            {
+                <tr>
+                    <td>@p.PaperId</td>
+                    <td>@EConference.Models.PaperTopic.Get(p.Id).Name</td>
+                    <td>@p.PaperTitle</td>
+                    <td>@p.Publisher</td>
+                    <td>@p.Participant</td>
+                    <td>@TimeZoneInfo.FindSystemTimeZoneById(p.TimeZone).DisplayName</td>
+                    <td>@p.Country</td>
+                    @if (p.ConferenceName != null)
+                    {
+                        <td>@p.ConferenceName.Name</td>
+                    }
+                    else
+                    {
+                        <td>Pending</td>
+                    }
+                    <td>
+                        <div class="text-center">
+                                <a href="/Admin/Papers/Upsert/@p.Id" class="btn btn-success text-white" style="cursor:pointer">
+                                    <i class="fas fa-edit"></i> 
+                                </a>
+                                <a href="/Admin/Papers/Delete/@p.Id" class="btn btn-danger text-white" style="cursor:pointer">
+                                    <i class="fas fa-trash-alt"></i> 
+                                </a>
+                            </div>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
     </table>
 </div>
-
-@section Scripts{
-
-<script src="~/js/papers.js"></script>
- }

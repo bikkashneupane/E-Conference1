@@ -17,6 +17,7 @@ using EConference.DataAccess.Repository;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using EConference.Utility;
 using EConference.Models;
+using EConference.DataAccess.Initializer;
 
 namespace EConference
 {
@@ -34,18 +35,24 @@ namespace EConference
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                options.UseSqlServer(
-                   Configuration.GetConnectionString("DefaultConnection")));
+                   Configuration.GetConnectionString("DefaultConnection")).
+                   UseLazyLoadingProxies());
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddDefaultTokenProviders()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
             services.AddSingleton<IEmailSender, EmailSender>();
+            services.Configure<EmailOptions>(Configuration);
+
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IDbInitilizer, DbInitilizer>();
+
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IDbInitilizer dbInitilizer)
         {
             if (env.IsDevelopment())
             {
@@ -66,13 +73,14 @@ namespace EConference
             app.UseAuthentication();
             app.UseAuthorization();
 
+            dbInitilizer.Initialize();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
-                SeedData.EnsurePopulated(app);
             });
         }
     }

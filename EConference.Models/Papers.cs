@@ -36,7 +36,7 @@ namespace EConference.Models
 
         public int? ConferenceID { get; set; }
         [ForeignKey("ConferenceID")]
-        public ConferenceName ConferenceName { get; set; }
+        public virtual ConferenceName ConferenceName { get; set; }
 
         public string UserId { get; set; }
         [ForeignKey("UserId")]

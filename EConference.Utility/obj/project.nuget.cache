@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RYnjq+QSLOJvtBNv9rXh/ELOLUdhIw9p9rtzfvfIIGs/ct45pAo4pbyKgFFiDPmYGjo6nNURJMb1LVobI4fzfg==",
+  "dgSpecHash": "gZgRbGNyf/cfCQaByzEUQeoOV6SlFmLSNg09nqLZp3V220nLIYCMOLKQ+npNdZgoSuDVqQ8jzVE9VYVqtDzITQ==",
   "success": true,
   "projectFilePath": "D:\\EConference-Bikash\\EConference.Utility\\EConference.Utility.csproj",
   "expectedPackageFiles": [
@@ -30,6 +30,8 @@
     "C:\\Users\\thisi\\.nuget\\packages\\microsoft.extensions.options\\3.1.8\\microsoft.extensions.options.3.1.8.nupkg.sha512",
     "C:\\Users\\thisi\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.8\\microsoft.extensions.primitives.3.1.8.nupkg.sha512",
     "C:\\Users\\thisi\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\thisi\\.nuget\\packages\\sendgrid\\9.21.0\\sendgrid.9.21.0.nupkg.sha512",
+    "C:\\Users\\thisi\\.nuget\\packages\\starkbank-ecdsa\\1.2.0\\starkbank-ecdsa.1.2.0.nupkg.sha512",
     "C:\\Users\\thisi\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",
     "C:\\Users\\thisi\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "C:\\Users\\thisi\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"

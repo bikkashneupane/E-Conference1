@@ -29,7 +29,7 @@ namespace EConference.Areas.Customer.Controllers
             return View();
         }
 
-        public IActionResult AboutUs()
+        public IActionResult Conferences()
         {
             return View();
         }

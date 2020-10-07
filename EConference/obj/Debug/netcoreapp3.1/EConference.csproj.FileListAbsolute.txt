@@ -337,12 +337,10 @@ D:\EConference-Bikash\EConference\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio
 D:\EConference-Bikash\EConference\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 D:\EConference-Bikash\EConference\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 D:\EConference-Bikash\EConference\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
-D:\EConference-Bikash\EConference\bin\Debug\netcoreapp3.1\SendGrid.dll
 D:\EConference-Bikash\EConference\bin\Debug\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll
 D:\EConference-Bikash\EConference\bin\Debug\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll
 D:\EConference-Bikash\EConference\bin\Debug\netcoreapp3.1\SQLitePCLRaw.core.dll
 D:\EConference-Bikash\EConference\bin\Debug\netcoreapp3.1\SQLitePCLRaw.provider.dynamic_cdecl.dll
-D:\EConference-Bikash\EConference\bin\Debug\netcoreapp3.1\StarkbankEcdsa.dll
 D:\EConference-Bikash\EConference\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 D:\EConference-Bikash\EConference\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
 D:\EConference-Bikash\EConference\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
@@ -436,9 +434,6 @@ D:\EConference-Bikash\EConference\bin\Debug\netcoreapp3.1\EConference.Utility.pd
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\EConference.csprojAssemblyReference.cache
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\EConference.AssemblyInfoInputs.cache
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\EConference.AssemblyInfo.cs
-D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\EConference.csproj.CoreCompileInputs.cache
-D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\EConference.MvcApplicationPartsAssemblyInfo.cs
-D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\EConference.MvcApplicationPartsAssemblyInfo.cache
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\EConference.RazorAssemblyInfo.cache
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\EConference.RazorAssemblyInfo.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\EConference.TagHelpers.input.cache
@@ -454,13 +449,10 @@ D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\View
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Users\Index.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
-D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\Conferences.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\ContactUs.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\Index.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\_ViewImports.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\_ViewStart.cshtml.g.cs
-D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\ConfirmEmail.cshtml.g.cs
-D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\ConfirmEmailChange.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\ForgotPassword.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\ForgotPasswordConfirmation.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
@@ -483,9 +475,7 @@ D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\P
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\_StatusMessage.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs
-D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\_ViewStart.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
-D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\RegisterConfirmation.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\ResetPassword.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\ResetPasswordConfirmation.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\_StatusMessage.cshtml.g.cs
@@ -494,7 +484,6 @@ D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\P
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\UserName\Default.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CreateAndBackToListButton.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_EditAndBackToListButton.cshtml.g.cs
@@ -512,3 +501,12 @@ D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\staticwebassets\EConfe
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\EConference.dll
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\EConference.pdb
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\EConference.genruntimeconfig.cache
+D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\TwoFactorAuthentication.cshtml.g.cs
+D:\EConference-Bikash\EConference\bin\Debug\netcoreapp3.1\SendGrid.dll
+D:\EConference-Bikash\EConference\bin\Debug\netcoreapp3.1\StarkbankEcdsa.dll
+D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\Conferences.cshtml.g.cs
+D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\UserName\Default.cshtml.g.cs
+D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\_ViewStart.cshtml.g.cs
+D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\EConference.csproj.CoreCompileInputs.cache
+D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\EConference.MvcApplicationPartsAssemblyInfo.cs
+D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\EConference.MvcApplicationPartsAssemblyInfo.cache

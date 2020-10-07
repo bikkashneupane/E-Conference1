@@ -27,7 +27,7 @@ using EConference.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b44daf424d0756b66607eacf2ea8afa5bc642bca", @"/Views/Shared/Components/UserName/Default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d8d10c6ed02ccad9a1849f8cd8ea0cea0a799323", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3f01a57a3dc4d545ba442a8ff40474bb396b7726", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Components_UserName_Default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<EConference.Models.ApplicationUser>
     {
         #pragma warning disable 1998
