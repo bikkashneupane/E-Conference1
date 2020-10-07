@@ -6,17 +6,20 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using EConference.Models;
+using EConference.DataAccess.Repository.IRepository;
+using Newtonsoft.Json;
+using EConference.Models.ViewModels;
 
 namespace EConference.Areas.Customer.Controllers
 {
     [Area("Customer")]
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController( IUnitOfWork unitOfWork)
         {
-            _logger = logger;
+            _unitOfWork = unitOfWork;
         }
 
         public IActionResult Index()
@@ -24,14 +27,10 @@ namespace EConference.Areas.Customer.Controllers
             return View();
         }
 
-        public IActionResult RegisterPaper()
-        {
-            return View();
-        }
 
-        public IActionResult AboutUs()
+        public IActionResult Conferences()
         {
-            return View();
+            return View("Conferences", _unitOfWork.Conferences.GetAll().OrderBy(c => c.ScheduledDate));
         }
 
         public IActionResult ContactUs()

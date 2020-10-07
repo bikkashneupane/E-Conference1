@@ -1,11 +1,10 @@
 ﻿@model EConference.Models.ViewModels.SchedulingViewModel
 
-<br />
-<div class="row">
-    <div class="col-6">
-        <h2 class="text-primary">Schedule Conferences</h2>
-    </div>
-</div>
+@{
+    ViewData["Title"] = "Schedule Conference";
+}
+
+<br /><br />
 
 <div class="p-4 border rounded">
     <form method="post">
@@ -60,7 +59,7 @@
         </table>
         @if (Model.Groups.Count > 0)
         {
-            <button type="submit" class="btn btn-outline-primary">Schedule Conferences</button>
+            <button type="submit" class="btn btn-primary">Schedule Conferences</button>
         }
     </form>
 </div>

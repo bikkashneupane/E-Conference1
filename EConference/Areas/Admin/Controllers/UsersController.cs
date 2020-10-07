@@ -5,11 +5,15 @@ using System.Threading.Tasks;
 using EConference.DataAccess.Data;
 using EConference.DataAccess.Repository.IRepository;
 using EConference.Models;
+using EConference.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EConference.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
+
     public class UsersController : Controller
     {
         private readonly ApplicationDbContext _db;

@@ -1,6 +1,8 @@
 ﻿using EConference.DataAccess.Repository.IRepository;
 using EConference.Models;
 using EConference.Models.ViewModels;
+using EConference.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System;
@@ -12,6 +14,8 @@ using System.Threading.Tasks;
 namespace EConference.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin + "," + SD.Role_Conference_Manager)]
+
     public class ConferenceController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

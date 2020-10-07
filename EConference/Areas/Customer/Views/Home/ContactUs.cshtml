@@ -1,6 +1,58 @@
 ﻿@{
     ViewData["Title"] = "Contact Us";
 }
-<div>
-    Contact Us
+
+<head>
+    <link rel="stylesheet" href="~/css/contact-us.css">
+</head>
+
+<div class="container contact-us">
+    <div style="text-align:center">
+        <h2>Contact Us</h2>
+        <p>Do not hesitate to contact us if you have any questions. Looking forward to be of service, we remain.</p>
+    </div>
+    <div class="row">
+        <div class="column">
+
+            <div class="card">
+                <img src="/images/Contact-Us.jpg" style="width:100%">
+                <div class="container">
+                    <h5>Contact Info</h5>
+                    <p>Easy Conferences</p>
+                    <p>Mailing Address <br> P.O Box 1233, 777 Sydney, Australia</p>
+                    <p>Physical Address <br>  10 Hilander Avenue, Sydney, Australia</p>
+                    <p>+61123456721</p>
+                    <p>info@easyconference.com</p>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <form action="">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Japan</option>
+                    <option value="usa">South Korea</option>
+                    <option value="usa">UK</option>
+                    <option value="usa">Saudi Arabia</option>
+                    <option value="usa">USA</option>
+                    <option value="usa">others..</option>
+                </select>
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                <button onclick="myFunction()">Submit</button>
+                <script>
+                    function myFunction() {
+                        alert("Your feedback is highly appreciated and will help us improve our ability to serve you.");
+                    }
+                </script>
+            </form>
+        </div>
+    </div>
 </div>

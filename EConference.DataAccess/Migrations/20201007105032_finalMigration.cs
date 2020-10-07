@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EConference.DataAccess.Migrations
 {
-    public partial class Initial : Migration
+    public partial class finalMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

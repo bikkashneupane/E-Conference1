@@ -6,6 +6,7 @@ using EConference.DataAccess.Repository.IRepository;
 using EConference.Models;
 using EConference.Models.ViewModels;
 using EConference.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -13,11 +14,13 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 namespace EConference.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
+
     public class PapersController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly UserManager<IdentityUser> _userManager;
-        private object allObj;
+        //private object allObj;
 
         public PapersController(IUnitOfWork unitOfWork, UserManager<IdentityUser> userManager)
         {
@@ -27,7 +30,15 @@ namespace EConference.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var currentUserId = _userManager.GetUserId(User);
+            if (User.IsInRole(SD.Role_Author))
+            {
+                return View("Index", _unitOfWork.Papers.GetAll(filter: p => p.UserId == currentUserId, includeProperties: "ConferenceName"));
+            }
+            else
+            {
+                return View("Index", _unitOfWork.Papers.GetAll(includeProperties: "ConferenceName"));
+            }
         }
 
         public IActionResult Upsert(int? id)
@@ -62,14 +73,21 @@ namespace EConference.Areas.Admin.Controllers
 
         }
 
+        public IActionResult Delete(int id)
+        {
+            _unitOfWork.Papers.Remove(id);
+            _unitOfWork.Save();
+            return RedirectToAction("Index");
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Upsert(PaperVM paperVM)
         {
             if (ModelState.IsValid)
             {
-                paperVM.Papers.ConferenceID = 1;
                 paperVM.Papers.UserId = _userManager.GetUserId(User);
+                paperVM.Papers.Publisher = paperVM.Papers.Publisher.ToUpper();
 
                 if (paperVM.Papers.Id == 0)
                 {
@@ -98,38 +116,38 @@ namespace EConference.Areas.Admin.Controllers
             return View(paperVM);
         }
 
+        //Not Using the API Call
+        //#region API CALLS
 
-        #region API CALLS
+        //[HttpGet]
+        //public IActionResult GetAll()
+        //{
+        //    var currentUserId = _userManager.GetUserId(User);
+        //    if (User.IsInRole(SD.Role_Author))
+        //    {
+        //        allObj = _unitOfWork.Papers.GetAll(filter: p => p.UserId == currentUserId, includeProperties: "ConferenceName");
+        //    }
+        //    else
+        //    {
+        //        allObj = _unitOfWork.Papers.GetAll(includeProperties: "ConferenceName");
+        //    }
+        //    return Json(new { data = allObj });
+        //}
 
-        [HttpGet]
-        public IActionResult GetAll()
-        {
-            var currentUserId = _userManager.GetUserId(User);
-            if (User.IsInRole(SD.Role_Author))
-            {
-                allObj = _unitOfWork.Papers.GetAll(filter: p => p.UserId == currentUserId, includeProperties: "ConferenceName");
-            }
-            else
-            {
-                allObj = _unitOfWork.Papers.GetAll(includeProperties: "ConferenceName");
-            }
-            return Json(new { data = allObj });
-        }
+        //[HttpDelete]
+        //public IActionResult Delete(int id)
+        //{
+        //    var objFromDb = _unitOfWork.Papers.Get(id);
+        //    if (objFromDb == null)
+        //    {
+        //        return Json(new { success = false, message = "Error while deleting" });
+        //    }
+        //    _unitOfWork.Papers.Remove(objFromDb);
+        //    _unitOfWork.Save();
+        //    return Json(new { success = true, message = "Delete Successful" });
 
-        [HttpDelete]
-        public IActionResult Delete(int id)
-        {
-            var objFromDb = _unitOfWork.Papers.Get(id);
-            if (objFromDb == null)
-            {
-                return Json(new { success = false, message = "Error while deleting" });
-            }
-            _unitOfWork.Papers.Remove(objFromDb);
-            _unitOfWork.Save();
-            return Json(new { success = true, message = "Delete Successful" });
+        //}
 
-        }
-
-        #endregion
+        //#endregion
     }
 }
