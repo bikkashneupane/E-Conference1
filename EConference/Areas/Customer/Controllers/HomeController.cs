@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using EConference.Models;
+using EConference.DataAccess.Repository.IRepository;
 
 namespace EConference.Areas.Customer.Controllers
 {
@@ -13,10 +14,12 @@ namespace EConference.Areas.Customer.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private IUnitOfWork _unitOfWork;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IUnitOfWork unitOfWork)
         {
             _logger = logger;
+            _unitOfWork = unitOfWork;
         }
 
         public IActionResult Index()
@@ -31,7 +34,8 @@ namespace EConference.Areas.Customer.Controllers
 
         public IActionResult Conferences()
         {
-            return View();
+            IEnumerable<Conference> conferences = _unitOfWork.Conferences.GetAll().Where(c => DateTime.Parse(c.ScheduledDate) > DateTime.Now);
+            return View(conferences);
         }
 
         public IActionResult ContactUs()
