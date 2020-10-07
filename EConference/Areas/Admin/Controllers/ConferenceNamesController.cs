@@ -4,15 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using EConference.DataAccess.Repository.IRepository;
 using EConference.Models;
-using EConference.Utility;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EConference.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = SD.Role_Admin + "," + SD.Role_Conference_Manager)]
-
     public class ConferenceNamesController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

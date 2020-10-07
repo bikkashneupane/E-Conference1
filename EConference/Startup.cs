@@ -17,7 +17,6 @@ using EConference.DataAccess.Repository;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using EConference.Utility;
 using EConference.Models;
-using EConference.DataAccess.Initializer;
 
 namespace EConference
 {
@@ -35,26 +34,18 @@ namespace EConference
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                options.UseSqlServer(
-                   Configuration.GetConnectionString("DefaultConnection")).
-                   UseLazyLoadingProxies());
-
+                   Configuration.GetConnectionString("DefaultConnection")));
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddDefaultTokenProviders()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-
             services.AddSingleton<IEmailSender, EmailSender>();
-            services.Configure<EmailOptions>(Configuration);
-
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddScoped<IDbInitializer, DbInitializer>();
-
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddRazorPages();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IDbInitializer dbInitializer)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -75,14 +66,13 @@ namespace EConference
             app.UseAuthentication();
             app.UseAuthorization();
 
-            dbInitializer.Initialize();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
+                SeedData.EnsurePopulated(app);
             });
         }
     }
