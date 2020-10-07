@@ -60,10 +60,6 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.8, )"
-            },
-            "SendGrid": {
-              "target": "Package",
-              "version": "[9.21.0, )"
             }
           },
           "imports": [
@@ -133,10 +129,6 @@
             "Microsoft.EntityFrameworkCore.Proxies": {
               "target": "Package",
               "version": "[3.1.8, )"
-            },
-            "SendGrid": {
-              "target": "Package",
-              "version": "[9.21.0, )"
             }
           },
           "imports": [
@@ -199,10 +191,6 @@
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
               "version": "[3.1.8, )"
-            },
-            "SendGrid": {
-              "target": "Package",
-              "version": "[9.21.0, )"
             }
           },
           "imports": [

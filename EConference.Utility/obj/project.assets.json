@@ -331,28 +331,6 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "SendGrid/9.21.0": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "9.0.1",
-          "starkbank-ecdsa": "[1.2.0, 2.0.0)"
-        },
-        "compile": {
-          "lib/netstandard2.0/SendGrid.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/SendGrid.dll": {}
-        }
-      },
-      "starkbank-ecdsa/1.2.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.1/StarkbankEcdsa.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.1/StarkbankEcdsa.dll": {}
-        }
-      },
       "System.Collections.Immutable/1.7.1": {
         "type": "package",
         "compile": {
@@ -911,45 +889,6 @@
         "newtonsoft.json.nuspec"
       ]
     },
-    "SendGrid/9.21.0": {
-      "sha512": "GY7NZcS0K4WjepDZhs5XxORqZDC1FmTz6iT/j9crCSCMBG4Y/9I/ia9b6ws8209Yv1uVjnDcNr0gf54ibIxIsw==",
-      "type": "package",
-      "path": "sendgrid/9.21.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/SendGrid.dll",
-        "lib/net40/SendGrid.pdb",
-        "lib/net40/SendGrid.xml",
-        "lib/net452/SendGrid.dll",
-        "lib/net452/SendGrid.pdb",
-        "lib/net452/SendGrid.xml",
-        "lib/netstandard1.3/SendGrid.dll",
-        "lib/netstandard1.3/SendGrid.pdb",
-        "lib/netstandard1.3/SendGrid.xml",
-        "lib/netstandard2.0/SendGrid.dll",
-        "lib/netstandard2.0/SendGrid.pdb",
-        "lib/netstandard2.0/SendGrid.xml",
-        "sendgrid.9.21.0.nupkg.sha512",
-        "sendgrid.nuspec"
-      ]
-    },
-    "starkbank-ecdsa/1.2.0": {
-      "sha512": "hP53QPYOOEIR44EK9phz+DYliM6DEieDZxpb8GZzE+++qyrWqUscKcyHCC6L9yu/ehllYtqxtT4qrjWDsuQlUQ==",
-      "type": "package",
-      "path": "starkbank-ecdsa/1.2.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/StarkbankEcdsa.dll",
-        "lib/net452/StarkbankEcdsa.dll",
-        "lib/netstandard1.3/StarkbankEcdsa.dll",
-        "lib/netstandard2.0/StarkbankEcdsa.dll",
-        "lib/netstandard2.1/StarkbankEcdsa.dll",
-        "starkbank-ecdsa.1.2.0.nupkg.sha512",
-        "starkbank-ecdsa.nuspec"
-      ]
-    },
     "System.Collections.Immutable/1.7.1": {
       "sha512": "B43Zsz5EfMwyEbnObwRxW5u85fzJma3lrDeGcSAV1qkhSRTNY5uXAByTn9h9ddNdhM+4/YoLc/CI43umjwIl9Q==",
       "type": "package",
@@ -1095,8 +1034,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.8",
-      "Microsoft.AspNetCore.Identity.UI >= 3.1.8",
-      "SendGrid >= 9.21.0"
+      "Microsoft.AspNetCore.Identity.UI >= 3.1.8"
     ]
   },
   "packageFolders": {
@@ -1143,10 +1081,6 @@
           "Microsoft.AspNetCore.Identity.UI": {
             "target": "Package",
             "version": "[3.1.8, )"
-          },
-          "SendGrid": {
-            "target": "Package",
-            "version": "[9.21.0, )"
           }
         },
         "imports": [

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ji0t7tbQ7nnSARk7WXtoHOuz1YxQgA1lvcU4V0u0L7sil/k03XbaHZfcLF1+ztjp3VWEXUDeC0BEZuwvQ26b8A==",
+  "dgSpecHash": "pMJjluNpkdLan8QHJ0Q8okfHF8iVx5PwGD7guxBaCTJ0ToHUZCyzfBjVc1XfzGF/q9qfh+aGd1NYidZiEjvSnA==",
   "success": true,
   "projectFilePath": "D:\\EConference-Bikash\\EConference.Models\\EConference.Models.csproj",
   "expectedPackageFiles": [
@@ -86,8 +86,6 @@
     "C:\\Users\\thisi\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\thisi\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\thisi\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
-    "C:\\Users\\thisi\\.nuget\\packages\\sendgrid\\9.21.0\\sendgrid.9.21.0.nupkg.sha512",
-    "C:\\Users\\thisi\\.nuget\\packages\\starkbank-ecdsa\\1.2.0\\starkbank-ecdsa.1.2.0.nupkg.sha512",
     "C:\\Users\\thisi\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\thisi\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\thisi\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
