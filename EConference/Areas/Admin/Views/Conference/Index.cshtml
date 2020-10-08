@@ -8,9 +8,12 @@
     <div class="col-6">
         <h2 class="text-primary">Scheduled Conferences</h2>
     </div>
-    <div class="col-6 text-right">
-        <a class="btn btn-primary" asp-area="Admin" asp-action="Schedule"><i class="far fa-clock"></i> &nbsp; Schedule a Conference</a>
-    </div>
+    @if (User.IsInRole(EConference.Utility.SD.Role_Admin) || User.IsInRole(EConference.Utility.SD.Role_Conference_Manager))
+    {
+        <div class="col-6 text-right">
+            <a class="btn btn-primary" asp-area="Admin" asp-action="Schedule"><i class="far fa-clock"></i> &nbsp; Schedule a Conference</a>
+        </div>
+    }
 </div>
 
 <br />
