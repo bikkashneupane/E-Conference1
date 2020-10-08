@@ -14,12 +14,10 @@ namespace EConference.Areas.Customer.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private IUnitOfWork _unitOfWork;
 
-        public HomeController(ILogger<HomeController> logger, IUnitOfWork unitOfWork)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            _unitOfWork = unitOfWork;
         }
 
         public IActionResult Index()
@@ -32,12 +30,7 @@ namespace EConference.Areas.Customer.Controllers
             return View();
         }
 
-        public IActionResult Conferences()
-        {
-            IEnumerable<Conference> conferences = _unitOfWork.Conferences.GetAll().Where(c => DateTime.Parse(c.ScheduledDate) > DateTime.Now);
-            return View(conferences);
-        }
-
+       
         public IActionResult ContactUs()
         {
             return View();

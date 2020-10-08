@@ -18,7 +18,11 @@
                 <th>Name</th>
                 <th>Date</th>
                 <th>Papers</th>
-                <th>Options</th>
+                @if (User.IsInRole(EConference.Utility.SD.Role_Admin) || User.IsInRole(EConference.Utility.SD.Role_Conference_Manager))
+                {
+                    <th>Options</th>
+                }
+
             </tr>
         </thead>
         <tbody>
@@ -27,9 +31,13 @@
                 <td>@Model.Name?.Name</td>
                 <td>@Model.ScheduledDate</td>
                 <td>@(Model.Papers?.Count ?? 0)</td>
-                <td>
-                    <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@Model.ID">Delete</a>
-                </td>
+                @if (User.IsInRole(EConference.Utility.SD.Role_Admin) || User.IsInRole(EConference.Utility.SD.Role_Conference_Manager))
+                {
+                    <td>
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@Model.ID">Delete</a>
+                    </td>
+                }
+
             </tr>
         </tbody>
     </table>

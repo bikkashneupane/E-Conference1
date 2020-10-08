@@ -8,7 +8,7 @@ D:\EConference-Bikash\EConference.DataAccess\bin\Debug\netcoreapp3.1\EConference
 D:\EConference-Bikash\EConference.DataAccess\obj\Debug\netcoreapp3.1\EConference.DataAccess.csprojAssemblyReference.cache
 D:\EConference-Bikash\EConference.DataAccess\obj\Debug\netcoreapp3.1\EConference.DataAccess.AssemblyInfoInputs.cache
 D:\EConference-Bikash\EConference.DataAccess\obj\Debug\netcoreapp3.1\EConference.DataAccess.AssemblyInfo.cs
+D:\EConference-Bikash\EConference.DataAccess\obj\Debug\netcoreapp3.1\EConference.DataAccess.csproj.CoreCompileInputs.cache
 D:\EConference-Bikash\EConference.DataAccess\obj\Debug\netcoreapp3.1\EConference.DataAccess.csproj.CopyComplete
 D:\EConference-Bikash\EConference.DataAccess\obj\Debug\netcoreapp3.1\EConference.DataAccess.dll
 D:\EConference-Bikash\EConference.DataAccess\obj\Debug\netcoreapp3.1\EConference.DataAccess.pdb
-D:\EConference-Bikash\EConference.DataAccess\obj\Debug\netcoreapp3.1\EConference.DataAccess.csproj.CoreCompileInputs.cache

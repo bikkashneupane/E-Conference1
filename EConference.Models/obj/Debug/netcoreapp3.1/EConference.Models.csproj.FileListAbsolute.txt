@@ -4,6 +4,6 @@ D:\EConference-Bikash\EConference.Models\bin\Debug\netcoreapp3.1\EConference.Mod
 D:\EConference-Bikash\EConference.Models\obj\Debug\netcoreapp3.1\EConference.Models.csprojAssemblyReference.cache
 D:\EConference-Bikash\EConference.Models\obj\Debug\netcoreapp3.1\EConference.Models.AssemblyInfoInputs.cache
 D:\EConference-Bikash\EConference.Models\obj\Debug\netcoreapp3.1\EConference.Models.AssemblyInfo.cs
+D:\EConference-Bikash\EConference.Models\obj\Debug\netcoreapp3.1\EConference.Models.csproj.CoreCompileInputs.cache
 D:\EConference-Bikash\EConference.Models\obj\Debug\netcoreapp3.1\EConference.Models.dll
 D:\EConference-Bikash\EConference.Models\obj\Debug\netcoreapp3.1\EConference.Models.pdb
-D:\EConference-Bikash\EConference.Models\obj\Debug\netcoreapp3.1\EConference.Models.csproj.CoreCompileInputs.cache
