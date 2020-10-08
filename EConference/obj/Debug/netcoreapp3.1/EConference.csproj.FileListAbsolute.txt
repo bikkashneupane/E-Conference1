@@ -454,7 +454,6 @@ D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\View
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Users\Index.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
-D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\Conferences.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\ContactUs.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\Index.cshtml.g.cs
 D:\EConference-Bikash\EConference\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\_ViewImports.cshtml.g.cs

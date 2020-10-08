@@ -35,7 +35,10 @@
                     <td>@(c.Papers?.Count ?? 0)</td>
                     <td>
                         <a class="btn btn-info" asp-action="ViewDetails" asp-route-id="@c.ID">Details</a>
-                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@c.ID">Delete</a>
+                        @if (User.IsInRole(EConference.Utility.SD.Role_Admin) || User.IsInRole(EConference.Utility.SD.Role_Conference_Manager))
+                        {
+                            <a class="btn btn-danger" asp-area="Admin" asp-controller="Conference" asp-action="Delete" asp-route-id="@c.ID">Delete</a>
+                        }
                     </td>
                 </tr>
             }

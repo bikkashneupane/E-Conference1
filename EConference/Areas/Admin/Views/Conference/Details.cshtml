@@ -34,7 +34,7 @@
                 @if (User.IsInRole(EConference.Utility.SD.Role_Admin) || User.IsInRole(EConference.Utility.SD.Role_Conference_Manager))
                 {
                     <td>
-                        <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@Model.ID">Delete</a>
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@Model.ID">Delete</a>
                     </td>
                 }
 
