@@ -35,7 +35,7 @@ namespace EConference.Models
 
                 for (int i = 0; i < timeZoneGroups; i++)
                 {
-                    if (ts.TotalMinutes <= timeZoneStart.Add(timePeriod.Multiply(i + 1)).TotalMinutes || ts.TotalMinutes > TimeSpan.FromHours(12).TotalMinutes)
+                    if (ts.TotalMinutes <= timeZoneStart.Add(timePeriod.Multiply(i + 1)).TotalMinutes || ((i + 1) == timeZoneGroups && ts.TotalMinutes > TimeSpan.FromHours(12).TotalMinutes))
                     {
                         timeGroups[i].Add(p);
                         break;

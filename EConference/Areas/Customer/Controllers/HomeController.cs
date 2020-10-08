@@ -34,7 +34,8 @@ namespace EConference.Areas.Customer.Controllers
 
         public IActionResult Conferences()
         {
-            return View("Conferences", _unitOfWork.Conferences.GetAll().Where(c => DateTime.Parse(c.ScheduledDate) > DateTime.Now));
+            IEnumerable<Conference> conferences = _unitOfWork.Conferences.GetAll().Where(c => DateTime.Parse(c.ScheduledDate) > DateTime.Now);
+            return View(conferences);
         }
 
         public IActionResult ContactUs()
